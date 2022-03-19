@@ -34,3 +34,49 @@ nav {
         }
     }
 }
+
+// MEDIA QUERIES (MEDIUM)
+@media screen and (max-width: 1024px) {
+    nav {
+        .container {
+            button {
+                display: inline-block;
+                background-color: transparent;
+                color: $white-color;
+                font-size: 2rem;
+                cursor: pointer;
+
+                &#close__nav-btn {
+                    display: none;
+                }
+            }
+
+            ul {
+                position: fixed;
+                top: 5rem;
+                right: 5%;
+                flex-direction: column;
+                gap: 0;
+                display: none;
+
+                li {
+                    width: 100%;
+
+                    a {
+                        color: $white-color;
+                        height: 100%;
+                        display: block;
+                        padding: 1.5rem 2rem;
+                        border-radius: 0;
+                        background: linear-gradient($primary-color-variant, darken($primary-color-variant,12%));
+                    
+                        &.btn {
+                            background: $secondary-color;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
