@@ -8,10 +8,27 @@ openNavBtn.addEventListener("click", () => {
     closeNavBtn.style.display = "inline-block"
 })
 
-closeNavBtn.addEventListener("click", () => {
+const closeNav = () => {
     navItems.style.display = "none"
     closeNavBtn.style.display = "none"
     openNavBtn.style.display = "inline-block"
+}
+
+closeNavBtn.addEventListener("click", () => {
+    closeNav()
+})
+
+if (window.innerWidth < 1024) {
+    document.querySelectorAll("#nav__items li a").forEach((navItem) => {
+        navItem.addEventListener("click", closeNav)
+    })
+}
+
+// change nav bar style on scroll
+window.addEventListener("scroll", () => {
+    document
+        .querySelector("nav")
+        .classList.toggle("window-scroll", window.scrollY > 0)
 })
 
 // Swiper JS

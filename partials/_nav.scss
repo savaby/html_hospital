@@ -8,6 +8,27 @@ nav {
     box-shadow: 0 1rem 1rem rgba($color: $black-color, $alpha: 0.1);
     @include gradientBackground;
 
+    &.window-scroll {
+        background: $white-color;
+
+        .container {
+            button {
+                color: $black-color;
+            }
+
+            a {
+                color: $black-color;
+
+                & > h3 {
+                    color: $black-color;
+                }
+
+                &.btn {
+                    color: $white-color;
+                }
+            }
+        }
+    }
     .container {
         display: flex;
         justify-content: space-between;
@@ -38,6 +59,14 @@ nav {
 // MEDIA QUERIES (MEDIUM)
 @media screen and (max-width: 1024px) {
     nav {
+
+        &.window-scroll {
+            .container {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
         .container {
             button {
                 display: inline-block;
