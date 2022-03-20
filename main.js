@@ -13,3 +13,25 @@ closeNavBtn.addEventListener("click", () => {
     closeNavBtn.style.display = "none"
     openNavBtn.style.display = "inline-block"
 })
+
+// Swiper JS
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
+})

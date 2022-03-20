@@ -1,6 +1,10 @@
 #testimonials {
     width: $container-lg;
 
+    .swiper-wrapper {
+        margin-bottom: 4rem;
+    }
+
     .container {
         article {
             @include gradientBackground;
@@ -30,6 +34,9 @@
 
 
             }
+    }
+    .swiper-pagination-bullet {
+        background-color: $primary-color;
     }
 }
 
